@@ -229,6 +229,11 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
+country-to-currency@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/country-to-currency/-/country-to-currency-1.0.10.tgz#007f5dcb1a04296f506879a4a68675e23bc779c1"
+  integrity sha512-M/RiNYiJ2Xp1okxqlINc/aTPXbxeYItgd0xTD4dtxREce8vjRqV3Vehrulcy8IimV/Of0wG5f//YSJp4KyGZFA==
+
 cssesc@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
