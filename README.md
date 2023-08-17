@@ -1,6 +1,7 @@
 What will u have in the result 
 
-![ezgif-5-080e5ae2f5](https://github.com/vitalik8545/YourWidget/assets/26333057/b9145bb0-43b3-47c1-ba7d-e80c572f4125)
+![ezgif-5-080e5ae2f5](https://github.com/vitalik8545/YourWidget/assets/26333057/3b612f1b-e904-4ec7-ac9c-60c9b9b9c78c)
+
 
 ## Getting Started
 
