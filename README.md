@@ -1,3 +1,7 @@
+What will u have in the result 
+
+![ezgif-5-080e5ae2f5](https://github.com/vitalik8545/YourWidget/assets/26333057/b9145bb0-43b3-47c1-ba7d-e80c572f4125)
+
 ## Getting Started
 
 For uploading package using
@@ -20,4 +24,3 @@ value for this variable is api key for website [api.exchangeratesapi.io](https:/
 ```bash
 ngrok http 3000
 ```
-
