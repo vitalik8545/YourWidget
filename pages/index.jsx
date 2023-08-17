@@ -7,6 +7,7 @@ import countryToCurrency from "country-to-currency/index";
 export default function Home({messagesConst}){
     const [messages, setMessages] = useState([])
 
+    //In this useEffect we display first message from server in one sec after mount
     useEffect(()=>{
         if(messages.length!==messagesConst.length){
             const timeout = setTimeout(()=>{
@@ -17,9 +18,13 @@ export default function Home({messagesConst}){
         }
     },[])
 
+    //this function displaying for us new message
     const showNewMessage = () => {
+        //get newMessage
         const newMessage = messages.length===messagesConst.length?null:messagesConst[messages.length]
+        //if we found new message
         if(newMessage){
+            //display this message in 0.5 sec
             setTimeout(()=>{
                 setMessages((messages)=>[...messages, newMessage])
             }, 500)
@@ -46,13 +51,17 @@ export default function Home({messagesConst}){
 export async function getServerSideProps({ req }) {
     const forwarded = req.headers["x-forwarded-for"]
     const ip = forwarded ? forwarded.split(/, /)[0] : req.connection.remoteAddress
+    //Get ip info
     const info = await GetInfoByIp(ip)
     let messagesConst=[{
         id: 0,
         text: "Wake up. Neo..."
     },];
+    //If ip was correct
     if(info.status==='success'){
+        //get code of currency by code of country
         const currency = countryToCurrency[info.countryCode]
+        //get info about country
         const rate = await GetCurrencyInfoByCountryCode(currency);
 
         messagesConst = [
