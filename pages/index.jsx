@@ -61,8 +61,9 @@ export async function getServerSideProps({ req }) {
     if(info.status==='success'){
         //get code of currency by code of country
         const currency = countryToCurrency[info.countryCode]
+        const base = currency === "EUR" ? "USD": "EUR";
         //get info about country
-        const rate = await GetCurrencyInfoByCountryCode(currency);
+        const rate = await GetCurrencyInfoByCountryCode(currency, base);
 
         messagesConst = [
             ...messagesConst,
@@ -72,7 +73,9 @@ export async function getServerSideProps({ req }) {
             },
             {
                 id: 2,
-                text: `Matrix has u, that's why u should to know about currency exchange - One ${rate.base} - ${JSON.stringify(rate.rates)}`
+                text: `Matrix has u, that's why u should to know about currency exchange - One ${rate.base} are:${
+                    Object.keys(rate.rates).map((key)=>` in ${key} is ${rate.rates[key]}`)
+                }`
             }
         ]
     }else {
